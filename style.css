@@ -1,0 +1,239 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+body{
+    background-color: rgb(47, 64, 47);
+
+}
+header{
+    background-color: rgb(47, 64, 47);
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    font-weight: 800;
+    font-size: 20px;
+    position: fixed;
+    width: 85%;
+    z-index: 1;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.nav-link{
+    transition: 0.3s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+
+#logo{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+
+}
+.content-text{
+    margin-left: 20px;
+}
+.underrubrik{
+    margin: 0%;
+    margin-top: 15px;
+}
+.content{
+    background-color: black;
+    color: white;
+    display: grid;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: 1fr 290px;
+    grid-template-rows: auto auto;
+    margin-left: 7.5%;
+    margin-right: 7.5%;    
+    top: 100px;
+    position: absolute;
+}
+.content-text {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.master-title{
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0%;
+    margin-left: 20px;
+    grid-template-columns: 1, -2;
+}
+.brödtext1{
+    grid-column: 1/-1;
+}
+.underrubrik{
+    grid-column: 1/-1;
+    grid-row: 3;
+}
+.brödtext2{
+    grid-column: 1/-1;
+    grid-row: 4;
+}
+.trailer1{
+    grid-column: 1/-1;
+    grid-row: 2;
+    margin: 10px;
+    margin-bottom: 30px;
+    height: 400px;
+}
+.aside{
+    grid-column: 2;
+    grid-row: 2/3;
+}
+.aside-content{
+    display: grid;
+
+    grid-template-columns: 3;
+    grid-template-rows: 4;
+    column-gap: 10px;
+    row-gap: 5px;
+    margin-bottom: 10px;
+
+
+}
+
+.aside-vänster{
+    display: flex;
+    justify-content: end;
+    font-weight: 800;
+    grid-column: 1/2;
+
+}
+.aside-höger{
+    grid-column: 2/3;
+}
+
+@media (max-width: 950px){
+    header{
+        margin: 0;
+    }
+    .nab
+    {
+        position: fixed;
+    }
+    .content {
+        margin: 0;
+    }
+    header{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:750px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    } 
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(47, 64, 47);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .content{
+      
+       grid-template-columns: 1fr
+    }
+   
+    .content-text{
+        grid-column: ;
+    }
+    .aside{
+        grid-column: 1/2;
+        grid-row: 4;
+    }
+    .master-title{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        display: flex;
+        justify-content: center;
+    }
+    .underrubrik{
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        display: flex;
+        justify-content: center;
+    }
+    .trailer1{
+        display: flex;
+        justify-content: center;
+        height: 90%;
+    }
+    .content-text{
+        margin-left: 2.5%;
+        margin-right: 2.5%;    }
+}
