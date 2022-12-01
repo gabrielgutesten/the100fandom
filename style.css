@@ -133,6 +133,7 @@ a{
     border-color: white;
     border-radius: 3px;
     border-width: 3px;
+    margin-right: 10px;
 }
 .aside-picture{
     position:relative;
