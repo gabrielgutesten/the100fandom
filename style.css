@@ -98,6 +98,7 @@ a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    gap: 5px;
 }
 .master-title{
     font-size: 60px;
@@ -108,6 +109,9 @@ a{
 }
 .brödtext1{
     grid-column: 1/-1;
+}
+.brödtext2{
+    margin-bottom: 15px;
 }
 .underrubrik{
     grid-column: 1/-1;
